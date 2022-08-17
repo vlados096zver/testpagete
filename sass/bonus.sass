@@ -1,0 +1,143 @@
+@import 'responsive'
+
+.bonus
+	&__wrap
+		display: flex	
+		flex-wrap: wrap
+		margin-bottom: 45px
+
+	&__item
+		&--card
+			width: 412px
+			background-color: #f4f8fa
+			padding: 20px
+			padding-bottom: 25px
+			border-radius: 25px
+			+media(md)
+				width: 100%
+				max-width: 412px
+				padding: 20px 15px
+				margin: 0 auto
+			+media(sm)
+				max-width: 350px
+				padding-bottom: 5px
+			img
+				display: block
+				width: 100%
+				height: 100%
+				border-radius: 25px
+				box-shadow: 0 20px 30px -10px rgba(0,0,0,0.3)
+
+		&--progress
+			width: calc(100% - 412px)
+			padding-top: 30px
+			+media(md)
+				width: 100%
+				order: -2
+				padding-top: 20px
+				margin-bottom: 46px
+
+	&__image
+		position: absolute
+		top: 0px
+		left: 0px
+		width: 100%
+		height: 100%
+
+	&__title,
+	&__number,
+	&__site
+		position: relative
+		z-index: 2
+
+	&__title
+		font-size: 27px
+		color: #fff
+		text-transform: uppercase
+		margin-bottom: 34px
+		font-weight: 700
+		+media(sm)
+			font-size: 20px
+			margin-bottom: 25px
+		span
+			font-size: 18px
+			color: #d5b7fb
+			text-transform: none
+			font-weight: normal
+			+media(sm)
+				font-size: 13px
+
+	&__number
+		font-size: 24px
+		color: #fff
+		background-image: url(../img/icons/bx_bxs.svg)
+		background-repeat: no-repeat
+		background-size: 20px
+		background-position: right top
+		padding-right: 25px
+		margin-bottom: 40px
+		+media(sm)
+			font-size: 18px
+			padding-right: 16px
+			background-size: 16px
+			margin-bottom: 30px
+
+	&__site
+		font-size: 16px
+		color: #fff
+
+	&__holder
+		position: relative
+		padding: 30px
+		margin-bottom: 40px
+		+media(sm)
+			padding: 25px 15px
+			margin-bottom: 22px
+
+	&__sum
+		font-size: 24px
+		color: #002638
+
+	&__count
+		display: block	
+		font-size: 19px
+		color: #3453F3
+		font-weight: 500	
+		text-align: center
+		margin-bottom: 20px
+
+	&__elem
+		text-align: center
+		color: #79778A
+		padding: 0 20px
+		padding-bottom: 8px
+
+	&__sum
+		font-size: 24px	
+		text-align: center
+		font-weight: 700
+		span
+			font-size: 20px	
+
+	&__row
+		display: flex
+		justify-content: space-between
+		+media(sm)
+			flex-direction: column
+
+	&__field
+		font-size: 16px
+		color: #79778A
+		padding-bottom: 5px
+		font-weight: 500
+
+	&__box
+		margin-bottom: 25px
+		&:first-child
+			padding-right: 16px
+			+media(sm)
+				padding-right: 0px
+
+	&__value
+		color: #002638
+		font-weight: 500

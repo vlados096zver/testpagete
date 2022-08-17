@@ -1,0 +1,49 @@
+@import 'responsive'
+
+.discount
+	&__title
+		font-size: 18px
+		color: #002638
+		padding-bottom: 10px
+		font-weight: 700
+
+	&__subtitle
+		font-size: 14px
+		color: #002638
+		padding-bottom: 20px
+
+	&__title,
+	&__subtitle
+		padding-left: 19px
+
+	&__col
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		background-color: #f4f8fa
+		border-radius: 10px
+		padding: 0 35px
+		padding-top: 18px
+		&:not(:last-child)
+			margin-bottom: 10px
+			+media(sm)
+				margin-bottom: 6px
+
+	&__price,
+	&__text
+		font-size: 14px	
+		padding-bottom: 18px
+
+	&__price
+		width: 186px
+		padding-right: 20px
+		font-weight: 700
+		+media(sm)
+			width: 100%
+			padding-right: 0px
+			padding-bottom: 16px
+
+	&__text
+		width: calc(100% - 186px)
+		+media(sm)
+			width: 100%

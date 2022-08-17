@@ -1,0 +1,117 @@
+@import 'responsive'
+
+.about
+	overflow: hidden
+	padding-top: 56px
+	padding-bottom: 150px
+	+media(mdx)
+		padding-top: 30px
+		padding-bottom: 20px
+	+media(sm)
+		padding-top: 10px	
+
+	&__gallery
+		padding-bottom: 35px
+		.swiper-slide
+			box-shadow: inset 0px 0px 5px #fff
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		&:not(:last-child)
+			margin-bottom: 215px
+			+media(mdx)
+				margin-bottom: 80px
+			+media(md)
+				margin-bottom: 45px
+
+		&:nth-child(2n)
+			.about__item--pic
+				order: 2
+				+media(md)
+					order: 0
+					margin-bottom: 35px
+
+			.about__item--text
+				padding-left: 0px
+				padding-right: 70px
+				+media(md)
+					padding-right: 0px
+
+	&__item
+		.swiper-button-prev
+			left: 25px
+
+		.swiper-button-next
+			right: 25px
+
+		&--pic
+			position: relative
+			width: calc(100% - 516px)
+			+media(md)
+				width: 100%
+
+		&--text
+			width: 516px
+			padding-left: 70px
+			+media(md)
+				order: -2
+				width: 100%
+				padding-left: 0px
+				margin-bottom: 40px
+			h1, h2, h3, h4, h5, h6
+				line-height: 1.2
+				color: #000000
+				padding-bottom: 20px	
+				font-weight: 700
+
+			h1
+				font-size: 30px
+				+media(mdx)
+					font-size: 26px
+				+media(sm)
+					font-size: 24px
+
+			h2
+				font-size: 28px
+				+media(mdx)
+					font-size: 24px
+				+media(sm)
+					font-size: 22px
+
+			h3
+				font-size: 26px
+				+media(mdx)
+					font-size: 22px
+				+media(sm)
+					font-size: 20px
+
+			h4, h5, h6
+				font-size: 24px		
+				+media(mdx)
+					font-size: 20px
+				+media(sm)
+					font-size: 18px
+
+			p
+				font-size: 18px
+				line-height: 1.65
+				color: #000000
+				+media(mdx)
+					font-size: 15px
+				+media(sm)
+					font-size: 14px
+				&:nth-child(2)
+					font-weight: 700
+				&:not(:last-child)
+					padding-bottom: 1.5em
+					+media(mdx)
+						padding-bottom: 1.2em
+
+	&__image
+		display: block
+		img
+			display: block
+			width: 100%
+			border-radius: 25px
+

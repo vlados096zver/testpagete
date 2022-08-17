@@ -1,0 +1,473 @@
+@import 'responsive'
+
+.personal
+	padding-top: 5px
+	margin-bottom: 110px
+	+media(mdx)
+		margin-bottom: 60px
+	+media(sm)
+		margin-top: -12px
+		padding-top: 0px
+		margin-bottom: 42px
+
+	&--block
+		margin-bottom: 55px
+		+media(mdx)
+			margin-bottom: 52px
+		+media(sm)
+			margin-bottom: 48px
+
+	&__user
+		input.error
+			font-size: 15px
+
+	&__wrap
+		display: flex	
+		flex-wrap: wrap
+
+	&__item
+		&--aside
+			position: sticky
+			top: 0px
+			width: 302px
+			align-self: flex-start
+			background-color: #f4f8fa
+			border-radius: 25px
+			+media(mdx)
+				width: 250px
+
+			+media(sm)
+				position: relative
+				width: 100%
+				border-radius: 0px
+				background-color: #fff
+				margin-bottom: 15px
+
+			&:after
+				+media(sm)
+					position: absolute
+					content: ' '
+					z-index: 6
+					bottom: 0px
+					left: -8px
+					right: -8px
+					width: calc(100% + 16px)
+					border-bottom: 1px solid #e9e8f4
+
+			&:before
+				+media(sm)
+					position: absolute
+					content: ' '
+					z-index: 5
+					top: 0px
+					left: -8px 
+					right: -8px
+					width: calc(100% + 16px)
+					height: 100%	
+					background-color: #fff
+
+		&--popup
+			&:after
+				+media(sm)
+					border-bottom-color: transparent
+
+		&--content
+			width: calc(100% - 302px)
+			padding-left: 25px
+			+media(mdx)
+				width: calc(100% - 250px)
+				padding-left: 15px
+			+media(sm)
+				width: 100%
+				padding-left: 0px
+
+	&__elem
+		background-color: #fff
+		border-radius: 25px
+		padding: 24px 20px
+		margin: 10px
+		margin-bottom: 45px
+		+media(sm)
+			display: none
+
+	&__name
+		font-size: 24px
+		line-height: 1.2
+		color: #002638
+		text-align: center
+		margin-bottom: 20px
+		font-weight: 700
+
+	&__bonus
+		font-size: 13px
+		line-height: 1.2
+		color: #79778a
+		text-align: center
+		margin-bottom: 6px
+
+	&__number
+		display: block
+		width: max-content
+		font-size: 14px
+		line-height: 1.2
+		color: #ffffff
+		background-color: #3453f3
+		border-radius: 4px
+		padding: 5px 10px
+		margin: 0 auto
+		margin-bottom: 22px
+		font-weight: 500
+
+	&__phone
+		text-align: center
+		a
+			color: #002638
+			font-weight: 500	
+
+	&__text
+		display: none
+		position: relative
+		z-index: 5
+		font-size: 14px
+		line-height: 1.2
+		color: #3453f3
+		padding: 32px 0
+		padding-left: 60px
+		border-radius: 0px
+		background-color: #fff
+		font-weight: 500
+		&:before
+			position: absolute
+			content: ' '
+			right: 0px
+			top: 50%
+			transform: translateY(-50%)
+			width: 24px
+			height: 24px
+			background-color: #e4e9ec
+			border-radius: 6px
+
+		&:after
+			position: absolute
+			content: ' '
+			z-index: 3
+			top: 50%
+			transform: translateY(-50%)
+			width: 5px 
+			height: 4px
+			border-radius: 6px
+			right: 9px
+			-webkit-mask: url(../img/icons/decor/arrow-menu.svg)
+			mask: url(../img/icons/decor/arrow-menu.svg)
+			background: #002638
+
+		+media(sm)
+			display: block
+
+		&--active
+			&:after
+				top: calc(50% - 2px)
+				transform: scale(-1)
+
+		span
+			position: relative
+			display: block
+			&:after
+				position: absolute
+				content: ' '
+				top: 50%
+				transform: translateY(-50%)
+				left: -36px
+				width: 22px
+				height: 22px
+				background-color: #002638
+			
+	&__list
+		margin: 0 10px
+		padding-bottom: 35px
+		+media(sm)
+			display: none
+			position: absolute
+			width: calc(100% + 16px)
+			top: 100%
+			left: -8px
+			right: -8px
+			z-index: 5
+			max-height: calc(100vh - 70px)
+			overflow-y: auto
+			overflow-x: hidden
+			background-color: #ffffff
+			margin: 0px
+			padding-bottom: 28px
+
+	&__link,
+	&__text
+		span
+			position: relative
+			display: block
+			&:after
+				position: absolute
+				content: ' '
+				top: 50%
+				transform: translateY(-50%)
+				left: -36px
+				width: 22px
+				height: 22px
+				background-color: #002638
+				+media(sm)
+					left: -44px
+
+		&--profile
+			span
+				&:after
+					left: -34px
+					width: 16px
+					height: 20px
+					-webkit-mask-image: url(../img/icons/personal/profile.svg) 
+					mask-image: url(../img/icons/personal/profile.svg) 
+					+media(sm)
+						left: -44px
+
+		//&--address
+			//span
+				//&:after
+					//left: -38px
+					//width: 24px
+					//height: 24px
+					//-webkit-mask: url(../img/icons/personal/address.svg)
+					//mask: url(../img/icons/personal/address.svg)
+					//+media(sm)
+						//left: -48px
+
+		&--order
+			span
+				&:after
+					left: -34px
+					width: 18px
+					height: 20px
+					-webkit-mask: url(../img/icons/personal/order.svg)
+					mask: url(../img/icons/personal/order.svg)
+
+		&--procat
+			span
+				&:after
+					left: -35px
+					width: 18px
+					height: 18px
+					-webkit-mask: url(../img/icons/personal/procat.svg)
+					mask: url(../img/icons/personal/procat.svg)
+
+		&--like
+			span
+				&:after
+					width: 21px
+					height: 20px
+					-webkit-mask: url(../img/icons/personal/like.svg)
+					mask: url(../img/icons/personal/like.svg)
+
+		&--bonus
+			span
+				&:after
+					width: 20px
+					height: 20px
+					-webkit-mask: url(../img/icons/personal/bonus.svg)
+					mask: url(../img/icons/personal/bonus.svg)
+
+		&--exit
+			span
+				&:after
+					left: -34px
+					width: 21px
+					height: 20px
+					-webkit-mask: url(../img/icons/personal/exit.svg)
+					mask: url(../img/icons/personal/exit.svg)
+
+	&__text
+		span:after
+			background: #3453f3
+
+	&__link
+		position: relative
+		&:nth-last-child(2)
+			border-bottom: 1px solid #E9E8F4
+			a
+				margin-bottom: 36px
+				+media(sm)
+					margin-bottom: 26px	
+
+		&:last-child
+			a
+				margin-top: 36px
+				+media(sm)
+					margin-top: 26px
+
+		a
+			position: relative
+			display: block
+			font-size: 14px
+			line-height: 1.2
+			color: #002638
+			border-radius: 11px
+			padding: 16px
+			padding-left: 76px
+			+media(sm)
+				padding-left: 68px
+				border-radius: 0px
+			&:after,
+			&:before
+				position: absolute
+				content: ' '
+
+			&:after
+				top: 0px
+				left: 0px
+				width: 100%
+				height: 100%	
+				
+			&:before
+				top: 50%
+				transform: translateY(-50%)
+				right: 10px
+				width: 4px
+				height: 28px
+				border-radius: 3px
+
+
+		&--active
+			+media(sm)
+				display: none
+			&:after
+				background-color: #3453f3
+			
+			a
+				color: #3453f3
+				&:after
+					background: linear-gradient(90deg, rgba(52, 83, 243, 0.07) 4.95%, rgba(52, 83, 243, 0.38) 97.52%)
+					opacity: 0.5
+					border-radius: 11px
+
+				&:before
+					background-color: #3453f3
+
+			span:after
+				background-color: #3453f3
+
+		&:hover
+			
+			&:after
+				background-color: #3453f3
+				transition: 0.25s background-color
+
+			a
+				color: #3453f3
+				transition: 0.25s color
+				+media(sm)
+					background: linear-gradient(90deg, rgba(52, 83, 243, 0.07) 4.95%, rgba(52, 83, 243, 0.38) 97.52%)
+
+			span:after
+				background-color: #3453f3
+				transition: 0.25s background-color
+	&__block
+		max-width: 520px
+		+media(sm)
+			max-width: 100%
+
+	&__title
+		font-size: 24px	
+		line-height: 1.2	
+		color: #002638
+		padding-top: 8px
+		margin-bottom: 25px
+		font-weight: 700	
+		+media(sm)
+			font-size: 20px	
+
+	&__box
+		&:not(:last-child)
+			margin-bottom: 34px
+		&--is-editing
+			.personal__btn:not(.personal__btn--edit)
+				display: block
+
+			.personal__btn--edit
+				display: none
+
+	&__row
+		display: flex	
+		align-items: center
+		justify-content: space-between
+
+	&__label
+		display: inline-block
+		font-size: 20px	
+		line-height: 1.2	
+		color: #002638
+		margin-bottom: 6px
+		font-weight: 500	
+
+	&__panel
+		display: flex	
+		margin-bottom: 6px
+
+	&__btn
+		cursor: pointer
+		background-repeat: no-repeat
+		background-position: center
+		background-size: 20px
+		display: block
+		width: 22px	
+		height: 22px	
+		background-color: #ffffff
+		border: none
+		outline: none
+		padding: 0px
+		&:not(.personal__btn--edit)
+			display: none	
+		&--edit
+			background-image: url(../img/icons/decor/edit-square.svg)
+			order: 2
+			margin-left: 15px
+
+		&--save
+			background-image: url(../img/icons/personal/tick-decor.svg)
+			margin-right: 15px	
+
+		&--del
+			background-image: url(../img/icons/personal/del-decor.svg)
+
+	&__input
+		display: block
+		width: 100%	
+		font-size: 15px	
+		line-height: 1.12	
+		color: #002638
+		border: 1px solid #e9e8f4
+		border-radius: 15px
+		padding: 24px 20px	
+		appearance: none
+		-webkit-appearance: none
+		-moz-appearance: none
+		&:disabled
+			color: #909090
+			background-color: #f3f3f3
+		&:focus
+			border-color: #79778a
+
+	&__change
+		display: inline-block	
+		cursor: pointer
+		font-size: 15px
+		line-height: 1.2	
+		color: #3453f3
+		background-color: #fff
+		border: none
+		outline: none
+		border-bottom: 1px dashed #3453F3
+		padding: 0px	
+		padding-bottom: 3px	
+		margin-top: 16px	
+		font-weight: 500
+		font-family: TTNorms
+		&:hover
+			border-color: transparent
+			transition: 0.25s border

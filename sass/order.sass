@@ -1,0 +1,121 @@
+@import 'responsive'
+
+.order
+	margin-top: 18px
+	padding-bottom: 40px
+	+media(sm)
+		padding-bottom: 22px
+
+	&__title
+		font-size: 24px
+		line-height: 1.2
+		text-align: center
+		padding-top: 22px
+		margin-bottom: 36px
+		font-weight: 700
+		+media(mdx)
+			padding-top: 10px
+		+media(sm)
+			margin-bottom: 28px
+
+	&__item
+		display: flex
+		flex-wrap: wrap
+		background-color: #f7fafc
+		border: 1px solid #e9e8f4
+		border-radius: 25px
+		padding: 10px 14px
+		margin-bottom: 10px
+	
+	&__box
+		&--pic
+			width: 272px
+			display: flex
+			justify-content: center
+			align-items: center
+			background-color: #ffffff
+			border-radius: 25px
+			padding: 40px 20px
+			+media(sm)
+				width: 100%
+				max-width: 272px
+				margin: 0 auto
+				margin-bottom: 15px
+			img
+				display: block
+
+		&--content
+			width: calc(100% - 272px)
+			padding: 10px 0
+			padding-left: 40px
+			+media(sm)
+				width: 100%
+				padding-left: 0px
+			h2
+				font-size: 20px
+				
+			h3
+				font-size: 18px
+
+			h4, h5, h6
+				font-size: 16px
+
+			h1, h2, h3, h4, h5, h6
+				line-height: 1.2
+				color: #002638
+				padding-bottom: 22px
+
+			p
+				font-size: 16px
+				line-height: 1.2
+				color: #002638
+				&:not(:last-child)
+					padding-bottom: 15px
+
+			ul, ol
+				padding: 0px
+				margin: 0px
+				padding-bottom: 1em
+				li
+					list-style-position: inside
+					margin-bottom: 8px	
+					font-weight: 700
+
+			ul
+				li
+					position: relative
+					list-style-type: none
+					font-size: 16px	
+					line-height: 1.2
+					padding-left: 15px
+					&:after
+						position: absolute
+						content: ' '
+						top: 50%
+						left: 0px
+						transform: translateY(-50%)
+						width: 4px
+						height: 4px
+						border-radius: 50%
+						background-color: #012738
+
+			img
+				display: block
+
+	&__text
+		max-width: 486px
+		width: 100%
+
+	&__info
+		display: block
+		background-image: url(../img/icons/delivery_pay/pencil.svg)
+		background-repeat: no-repeat
+		background-size: 16px
+		background-position: left center
+		font-size: 10px
+		line-height: 1.2
+		color: #ff002e
+		text-transform: uppercase
+		padding-left: 22px
+		margin-bottom: 22px
+		font-weight: 700

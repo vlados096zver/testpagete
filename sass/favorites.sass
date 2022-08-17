@@ -1,0 +1,166 @@
+@import 'responsive'
+
+.favorites
+	padding-bottom: 25px
+	+media(sm)
+		margin-top: -12px
+		padding-bottom: 32px	
+
+	.product__item
+		width: calc(100% / 3 - 24px)
+		+media(mdx)
+			width: calc(100% / 2 - 24px)
+		+media(sm)
+			width: calc(100% / 2 - 8px)
+
+	.select__wrap
+		display: none	
+		max-width: 148px
+		width: 100%
+		+media(sm)
+			display: block	
+
+	&__title
+		font-size: 24px
+		line-height: 1.2
+		color: #002638
+		font-weight: 700
+		padding-bottom: 30px
+		+media(sm)
+			padding-bottom: 20px
+
+	&__block
+		display: flex
+		align-items: center
+		margin-bottom: 24px
+
+	&__holder
+		margin-right: 30px
+
+	&__wrap-clear
+		position: relative
+		margin-right: 20px
+		padding-top: 5px
+		margin-bottom: 50px
+		+media(sm)
+			width: max-content
+			padding-top: 10px
+			margin: 0 auto
+			margin-bottom: 40px
+		.things__popup
+			min-width: 264px
+			right: initial
+			left: 0px
+			top: 45px
+			+media(sm)
+				left: 50%
+				transform: translateX(-50%)
+
+		.things__arrow
+			right: initial
+			left: 70px
+			+media(sm)
+				left: 50%
+				transform: translateX(-50%)
+			
+	&__clear
+		cursor: pointer
+		position: relative
+		display: flex
+		align-items: center
+		background-color: transparent
+		border: none
+		outline: none
+		font-weight: 500
+		font-family: TTNorms
+		svg
+			display: block	
+			width: 19px
+			height: 20px
+			fill: #79778a
+			margin-right: 8px
+			
+		span
+			font-size: 14px
+			line-height: 1.2
+			color: #002638
+		&:hover	
+			svg
+				fill: #ff002e
+				transition: 0.25s fill
+			span
+				color: #ff002e
+				transition: 0.25s color
+
+	&__del
+		cursor: pointer
+		display: block
+		width: 19px
+		height: 20px
+		background-color: transparent
+		border: none
+		outline: none
+		padding: 0px
+		margin-bottom: 35px
+		svg	
+			display: block
+			fill: #79778a
+		&:hover
+			svg
+				fill: #ff002e
+				transition: 0.25s fill
+
+	&__empty
+		font-size: 16px
+		line-height: 1.2
+		text-align: center
+		padding: 20px 0
+		font-weight: 500
+
+	&__tabs
+		display: inline-flex
+		position: relative
+		max-width: 304px
+		width: 100%
+		margin-bottom: 28px
+		background-color: #E9E8F4
+		border-radius: 15px
+		padding: 3px
+
+	&__box
+		width: 50%
+		position: relative
+		z-index: 3
+		cursor: pointer
+		display: inline-block
+		font-size: 12px
+		line-height: 1.2
+		color: #002638
+		text-align: center
+		padding: 10px
+		border-radius: 15px
+		text-transform: uppercase
+		font-weight: 700
+		span
+			border-bottom: 1px dashed #002638
+		&--active
+			color: #fff
+			span
+				border-bottom: 1px dashed transparent
+
+	&__mask
+		position: absolute
+		width: calc(50% - 3px)
+		height: calc(100% - 6px)
+		top: 3px
+		left: 3px
+		background-color: #3453f3	
+		border-radius: 15px
+		transition: 0.25s background-color, 0.25s left
+
+	.favorites__del
+		margin-bottom: 0px
+
+	.rcatalog__block
+		align-items: flex-start
+		

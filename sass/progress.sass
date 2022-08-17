@@ -1,0 +1,26 @@
+
+
+.progress
+	position: relative
+	display: grid	
+	grid-auto-rows: max-content
+	justify-items: center
+	margin-bottom: 20px	
+	&:after
+		position: absolute
+		content: '%'
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		font-size: 30px
+		color: #fff
+
+	&__pic
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		img 
+			display: block
+			max-width: 102px
+			width: 100%

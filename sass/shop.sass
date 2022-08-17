@@ -1,0 +1,62 @@
+@import 'responsive'
+
+.shop
+	background-color: #f7fafc
+	padding-top: 25px	
+	padding-bottom: 50px	
+	+media(mdx)
+		padding-top: 15px
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+
+	&__item
+		&:first-child
+			width: 42.5%
+			padding-right: 25px
+			+media(mdx)
+				width: 100%
+				padding-right: 0px
+				margin-bottom: 9px
+
+			.shop__elem, .shop__image
+				height: 100%	
+
+		&:last-child
+			width: 57.5%
+			
+			+media(mdx)
+				width: 100%
+			img
+				height: 270px
+				object-fit: cover
+				+media(sm)
+					height: 200px
+				+media(smx)
+					height: 160px
+				+media(mini)
+					height: 110px
+
+	&__image
+		display: block	
+		img
+			display: block
+			width: 100%
+			height: 100%	
+			object-fit: cover
+			border-radius: 25px
+			+media(sm)
+				border-radius: 10px
+
+	&__row
+		display: flex
+		margin-top: 24px
+		+media(mdx)
+			margin-top: 9px
+		.shop__elem
+			flex-grow: 1
+			&:last-child
+				margin-left: 25px
+				+media(mdx)
+					margin-left: 9px

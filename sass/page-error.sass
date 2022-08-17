@@ -1,0 +1,115 @@
+@import 'responsive'
+
+.page-error
+	margin-bottom: 30px
+	+media(sm)
+		margin-bottom: 18px
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		background-color: #e9f0f4
+		border-radius: 20px
+		padding: 25px 50px
+		+media(mdx)
+			padding: 38px 20px
+			padding-bottom: 60px
+
+	&__item
+		+media(smdx)
+			display: contents
+		&--content
+			width: calc(100% - 426px)
+			padding-right: 25px
+			+media(smdx)
+				width: 100%
+				padding-right: 0px
+
+		&--image
+			width: 426px
+			+media(smdx)
+				width: 100%
+			picture, img
+				display: block
+
+	&__title
+		font-size: 36px
+		line-height: 1.2
+		color: #002638
+		padding-bottom: 50px
+		font-weight: 700
+		+media(mdx)
+			font-size: 30px
+			padding-bottom: 40px
+		+media(smdx)
+			order: -2
+			width: 100%
+			font-size: 22px
+			padding-bottom: 18px
+			text-align: center
+
+	&__text
+		max-width: 482px
+		width: 100%
+		padding-bottom: 50px
+		+media(smdx)
+			margin: 0 auto
+			max-width: 100%
+			padding-bottom: 44px
+		p
+			font-size: 16px
+			line-height: 1.2
+			color: #002638
+			+media(smdx)
+				font-size: 14px
+				text-align: center
+
+	&__link
+		display: inline-block
+		cursor: pointer
+		position: relative
+		font-size: 16px
+		line-height: 1.5
+		color: #3453f3
+		background-color: #e9f0f4
+		border: 1px solid #3453f3
+		border-radius: 15px
+		padding: 18px 15px
+		padding-right: 94px
+		font-weight: 500
+		font-family: TTNorms
+		+media(smdx)
+			margin: 0 auto
+			display: block
+			max-width: 198px
+
+		&:after,
+		&:before
+			position: absolute
+			font-size: 10px
+			top: 50%
+			transform: translateY(-50%) scale(1, 2)
+
+		&::before
+			content: '➤ ➤'
+			right: 17px
+			color: #c3cef8
+			transition: 0.25s color
+
+		&::after 
+			content: '➤'
+			right: 42px
+			color: #3453f3
+
+		&:hover
+			&:before
+				color: #3453f3
+
+	&__pic
+		+media(mdx)
+			order: -1
+			margin: 0 auto
+			margin-bottom: 20px
+		+media(sm)
+			padding: 0 31px

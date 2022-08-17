@@ -1,0 +1,80 @@
+@import 'responsive'
+
+.text
+	margin-bottom: 80px
+	+media(mdx)
+		margin-bottom: 50px
+	+media(sm)
+		margin-bottom: 40px
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		background-color: #e9f0f4
+		border-radius: 20px
+		padding: 50px
+		padding-right: 120px
+		+media(lgs)
+			padding: 35px
+			padding-right: 50px
+		+media(mdx)
+			padding: 35px 25px
+		+media(sm)
+			padding: 20px 15px
+			padding-bottom: 35px
+
+	&__item
+		&--pic
+			width: 464px
+			+media(mdx)
+				width: 100%
+				order: -1
+			+media(mdx)
+				max-width: 310px
+			+media(sm)
+				max-width: 138px
+
+			img, picture
+				display: block
+
+		&--content
+			width: calc(100% - 464px)
+			padding-right: 26px
+			+media(mdx)
+				width: 100%
+				padding-right: 0px
+
+
+	&__title
+		font-size: 33px
+		line-height: 1.2
+		color: #002638
+		padding-top: 12px
+		padding-bottom: 40px
+		font-weight: 700
+		+media(lgs)
+			font-size: 30px
+		+media(sm)
+			font-size: 22px
+			padding-bottom: 30px
+
+	&__list
+		max-width: 485px
+
+	&__box
+		font-size: 18px
+		line-height: 1.7
+		color: #3453F3
+		font-weight: 500
+		+media(sm)
+			font-size: 16px
+		a
+			display: inline-block
+			color: inherit
+			&:hover
+				color: #2841bf
+				transition: 0.25s color
+		&:not(:last-child)
+			margin-bottom: 8px	
+			+media(sm)
+				margin-bottom: 6px

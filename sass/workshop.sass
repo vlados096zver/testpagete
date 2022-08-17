@@ -1,0 +1,179 @@
+@import 'responsive'
+
+.workshop
+	margin-bottom: 80px
+	+media(mdx)
+		margin-bottom: 60px
+	+media(sm)
+		margin-bottom: 45px
+
+	.container
+		max-width: 1280px
+
+	&__title
+		font-size: 48px
+		line-height: 1.2
+		color: #002638
+		padding-top: 6px
+		padding-bottom: 55px
+		+media(mdx)
+			padding-bottom: 40px	
+		+media(sm)
+			font-size: 40px
+
+	&__subtitle
+		font-size: 24px
+		line-height: 1.2
+		color: #002638
+		text-align: center
+		padding-bottom: 44px
+		font-weight: 700
+		+media(sm)
+			padding-bottom: 30px
+
+	&__holder
+		display: flex
+		justify-content: center
+		padding-bottom: 30px
+		+media(sm)
+			flex-wrap: wrap
+			padding-bottom: 4px
+
+	&__box
+		cursor: pointer
+		max-width: 200px
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 13px
+		line-height: 1.2
+		background-color: #f7fafc
+		border: 1px solid #e9e8f4
+		border-radius: 15px
+		text-align: center
+		text-transform: uppercase
+		padding: 24px
+		margin-bottom: 30px
+		font-weight: 700
+		&:not(:last-child)
+			margin-right: 24px
+			+media(sm)
+				margin-right: 0px
+		+media(sm)
+			max-width: 400px
+		&--active
+			border-color: #3453f3
+
+	&__table
+		overflow-x: auto
+		overflow-y: hidden
+
+	&__item
+		table
+			width: 100%
+			tr
+				&:not(:last-child)
+					th, td
+						border-bottom: 1px solid #e9e8f4
+			th
+				font-size: 16px
+				line-height: 1.2
+				color: #79778a
+
+			th, td
+				vertical-align: top
+				padding: 28px 0
+				padding-right: 15px
+				strong
+					font-weight: 700
+
+				&:first-child
+					max-width: 570px
+					min-width: 370px
+					//width: 100%
+
+				&:nth-child(2)
+					max-width: 470px
+					min-width: 370px
+					//width: 100%
+
+				&:last-child
+					min-width: 170px
+					width: 170px
+
+			ul
+				li
+					max-width: 408px
+					font-size: 16px
+					font-weight: 500
+					&:not(:last-child)
+						margin-bottom: 10px
+
+			p
+				font-size: 18px
+				color: #002638
+				padding-bottom: 15px
+				font-weight: 700
+
+			div
+				max-width: 380px
+				font-size: 16px
+				padding-top: 16px
+				font-weight: 700
+				span
+					font-weight: normal
+
+	.workshop__special
+		td:not(:last-child)
+			vertical-align: bottom
+
+		strong
+			display: block
+			position: relative
+			top: 4px
+			&:not(:last-child)
+
+				margin-bottom: 10px
+
+	.workshop__list	
+		li
+			display: flex
+			width: 100%
+			white-space: nowrap
+			max-width: 100%
+			padding-right: 0px
+			&:after
+				display: block
+				width: calc(100% + 20px)
+				flex-grow: 1
+				content: ' '
+				margin-left: 8px
+				border-bottom: 1px dashed #002638
+
+	&__social
+		display: flex
+		padding-top: 32px
+		+media(mdx)
+			padding-top: 22px	
+
+	&__col
+		background-repeat: no-repeat
+		background-position: left center
+		padding-left: 32px	
+		&:not(:last-child)
+			margin-right: 20px
+		a
+			display: block
+			font-size: 13px
+			line-height: 1.2
+			color: #002638
+			padding: 4px 0
+
+		&--viber
+			background-size: 22px 24px
+			background-image: url(../img/icons/socials/viber.svg)
+
+		&--telegram
+			background-size: 22px 18px
+			background-image: url(../img/icons/socials/telegram.svg)
